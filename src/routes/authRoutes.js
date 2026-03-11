@@ -7,6 +7,9 @@ const router = express.Router();
 router.get("/signup", (req, res) => {
     res.render("signup");
 });
-router.post("/singup", (req, res) => {});
+router.post("/signup", (req, res) => {
+    console.log(req.body);
+    res.send("Signup data received");
+});
 
 export default router;
