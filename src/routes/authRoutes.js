@@ -1,15 +1,12 @@
 import express from "express";
 
 const router = express.Router();
-
-// Lofic for handling signup page logi
+import { handleSingup } from "../controllers/authController.js";
+// Lofic for handling signup page logic
 
 router.get("/signup", (req, res) => {
     res.render("signup");
 });
-router.post("/signup", (req, res) => {
-    console.log(req.body);
-    res.send("Signup data received");
-});
+router.post("/signup", handleSingup);
 
 export default router;
